@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "";
+}
+
+<h2>Asignacion de Propiedades</h2>
+<div ng-app='crudModule'>
+    <table width="50%" ng-Controller="ctrlObjProps">
+        <tr>
+            <td colspan="3">
+            <div class="form-group input-group">
+                <label class="input-group-addon">Objeto:</label>
+                <select id="ddlObjeto" class="form-control" ng-model="Objeto" ng-options="objeto.Nombre for objeto in Objetos" ng-change="CargarPropiedades()">
+                    <option value=''>--- Seleccione un valor ---</option>
+                </select>
+            </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label>Propiedades sin Asignar</label>
+                    <select id="lstPropLibres" class="form-control" size="10" style="width:250px;overflow-y:scroll;" multiple="true" ng-multiple="false" ng-model="PropLibre" ng-options="propiedad.Nombre for propiedad in PropLibres">
+                    </select>
+                </div>                           
+            </td>
+            <td valign="middle">
+                <div class="form-group">
+                    <button type="button" class="btn btn-info btn-circle" ng-click="save()">>></button>
+                    <br />
+                    <button type="button" class="btn btn-info btn-circle" ng-click="delete()"><<</button>
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                    <label>Propiedades Asignadas</label>
+                    <select id="lstPropObjeto" class="form-control" size="10" style="width:250px;overflow-y:scroll;" multiple="true" ng-multiple="false" ng-model="PropAsig" ng-options="propObj.Nombre for propObj in PropsObjeto">
+                    </select>            
+                </div>
+            </td>
+        </tr>
+</table>
+</div>
+@section scripts{
+    @Scripts.Render("~/bundles/angular")
+}

@@ -1,0 +1,61 @@
+﻿@model Sysbat.Models.Propiedad
+
+@{
+    ViewBag.Title = "Editar Propiedad";
+    Layout = "~/Views/Shared/_DetailsLayout.cshtml";
+}
+
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+<div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Crear Propiedad</h4>
+    </div>
+    <div class="modal-body" onload="setDDLEvents">
+        <div class="editor-field form-group input-group">
+            @Html.LabelFor(model => model.Nombre, new { @class = "input-group-addon" })
+            @Html.EditorFor(model => model.Nombre, new { @class = "form-control" })
+        </div>
+        @Html.ValidationMessageFor(model => model.Nombre)
+        <div class="editor-field form-group input-group">
+            @Html.LabelFor(model => model.Tipo, new { @class = "input-group-addon" })
+            @Html.DropDownList("tipos", (SelectList)ViewBag.ListaTipos, "Selecciona Uno", new { @class = "form-control", id = "ddlTipos"})
+        </div>
+        <div id="TiposObjetos" class="editor-field form-group input-group" style="display:@ViewBag.MostrarObjetoDdl">
+            @Html.Label("Tipo de Objeto", new { @class = "input-group-addon" })
+            @Html.DropDownList("tipoObjeto", (SelectList)ViewBag.ListaTiposObjetos, "Selecciona Uno", new { @class = "form-control", id = "ddlTiposObjetos" })
+        </div>
+        @Html.HiddenFor(model => model.Tipo, new { id = "hdnTipoVal" })
+        @Html.ValidationMessageFor(model => model.Tipo)
+    </div>
+    <div class="modal-footer">
+        <input type="submit" value="Guardar" class="btn btn-success" />
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#ddlTipos").change(establecerValorTipo);
+            $("#ddlTiposObjetos").change(establecerValorObjeto);
+            //alert('loaded');
+        })
+        function establecerValorTipo() {
+            var val = $(this).val();
+            if (val === "Objeto") {
+                $("#TiposObjetos").show();
+                $("#hdnTipoVal").val('');
+            } else {
+                $("#TiposObjetos").hide();
+                $("#hdnTipoVal").val(val);
+            }
+        };
+
+        function establecerValorObjeto() {
+            $("#hdnTipoVal").val($(this).val());
+        }
+    </script>
+}

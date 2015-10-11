@@ -1,0 +1,31 @@
+﻿@model Sysbat.Models.Objeto
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_DetailsLayout.cshtml";
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Editar Objeto</h4>
+    </div>
+    <div class="modal-body">
+        @Html.HiddenFor(model => model.Oid)
+        @Html.HiddenFor(model => model.FechaCreacion)
+        <div class="editor-field form-group input-group">
+            @Html.LabelFor(model => model.Nombre, new { @class = "input-group-addon" })
+            @Html.EditorFor(model => model.Nombre, new { @class = "form-control" })
+        </div>
+        @Html.ValidationMessageFor(model => model.Nombre, "Favor de asignar el nombre del Objeto")
+    </div>
+    <div class="modal-footer">
+        <input type="submit" value="Editar" class="btn btn-success" />
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

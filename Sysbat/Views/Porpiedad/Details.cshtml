@@ -1,0 +1,25 @@
+﻿@model Sysbat.Models.Propiedad
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_DetailsLayout.cshtml";
+}
+
+
+<div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Detalles del Objeto</h4>
+    </div>
+    <div class="modal-body">
+        <div class="editor-field form-group input-group">
+            @Html.LabelFor(model => model.Nombre, new { @class = "input-group-addon" })
+            @Html.EditorFor(model => model.Nombre, new { @class = "form-control", @readonly = true })
+        </div>
+        <div class="editor-field form-group input-group">
+            @Html.LabelFor(model => model.Tipo, new { @class = "input-group-addon" }):
+            @Html.TextBox("", (string)@ViewBag.Tipo, new { @class = "form-control", @readonly = true })
+        </div>
+    </div>
+    <div class="modal-footer">
+        @Html.ActionLink("Editar", "Edit", new { id = Model.Oid }, new { @class = "btn btn-info" })
+    </div>

@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Admin Site for the System Base Template">
+    <meta name="author" content="Carlos Julian Lopez C">
+    <title>System Base Template Administration</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+<div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/Objeto/">SysBat Admin</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">                  
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="/Objeto/"><i class="fa fa-th-large fa-fw"></i> Objeto</a>
+                        </li>
+                        <li>
+                            <a href="/Porpiedad/"><i class="fa fa-th fa-fw"></i> Porpiedad</a>
+                        </li>
+                        <li>
+                            <a href="/ObjProp/"><i class="fa fa-share-alt fa-fw"></i> Propiedad de Objeto</a>
+                        </li>
+                        <li>
+                            <a href="/ObjVal/"><i class="fa fa-th-list fa-fw"></i> Valores de Objeto</a>
+                        </li>
+                        <li>
+                            <a href="/PropVal/"><i class="fa fa-th-list fa-fw"></i> Valores de Propiedades</a>
+                        </li>                        
+                        
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            @RenderBody()            
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+    <div class="modal fade" id="modalWndw" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width: 600px !important; margin: 30px auto !important;" id='modalContainer'>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+
+        var mensajeEspera = (function () {
+            var modalActivo = false;
+            var modalEspera = $('<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLoadingMessage"><div class="modal-dialog modal-sm" role="document"><div class="modal-content"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">Cargando...</div></div></div></div>');
+            return {
+                mostrar: function (msg) {
+                    if (msg === undefined || msg === '')
+                        msg = "Cargando...";
+                    modalEspera.find(".progress-bar").text(msg)
+                    modalEspera.modal('show');
+                    modalActivo = true;
+                },
+                ocultar: function () {
+                    modalEspera.modal('hide');
+                    modalActivo = false;
+                },
+                activo: function () {
+                    return modalActivo;
+                }
+            };
+        })();
+        $(document).ready(function () {
+            $("#modalWndw").on("hidden.bs.modal", function () {
+                $("#modalContainer").unload();
+            });
+        })
+
+        function showModal(url) {
+            mensajeEspera.mostrar();
+            $("#modalContainer").load(url, function () {
+                mensajeEspera.ocultar();
+                setTimeout(function() {
+                    $("#modalWndw").modal('show');
+                }, 250);
+            });
+        }
+    </script>
+
+</body>
+</html>
