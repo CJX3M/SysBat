@@ -5,7 +5,7 @@ using System.Web;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
-namespace Sysbat.Models
+namespace SysbatLib.Models
 {
     public class SysbatContext : DbContext
     {

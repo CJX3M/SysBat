@@ -5,13 +5,13 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Sysbat.Models;
+using SysbatLib.Models;
 
 namespace Sysbat.Controllers
 {
     public class PorpiedadController : Controller
     {
-        private SysbatContext db = new SysbatContext();
+        private SysbatContext db = Utils.SysBatLibContext.GetContext();
 
         private List<Propiedad> listaPropiedades;
         private List<Propiedad> ListaPropiedades

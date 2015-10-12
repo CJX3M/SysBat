@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Newtonsoft.Json;
 
-namespace Sysbat.Models
+namespace SysbatLib.Models
 {
     /// <summary>
     /// Class that hold the Objetos to be used in the system

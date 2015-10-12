@@ -8,13 +8,13 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
-using Sysbat.Models;
+using SysbatLib.Models;
 
 namespace Sysbat.Controllers
 {
     public class propvalapiController : ApiController
     {
-        private SysbatContext db = new SysbatContext();
+        private SysbatContext db = Utils.SysBatLibContext.GetContext();
 
         // GET api/propvalapi
         public IEnumerable<PropiedadValores> GetPropiedadValores()

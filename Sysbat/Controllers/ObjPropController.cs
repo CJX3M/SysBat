@@ -8,7 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
-using Sysbat.Models;
+using SysbatLib.Models;
 
 namespace Sysbat.Controllers
 {
@@ -16,7 +16,7 @@ namespace Sysbat.Controllers
 
     public class ObjPropApiController : ApiController
     {
-        private SysbatContext db = new SysbatContext();
+        private SysbatContext db = Utils.SysBatLibContext.GetContext();
         [HttpGet]
         public IEnumerable<Objeto> GetObjetos()
         {
