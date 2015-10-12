@@ -82,4 +82,18 @@ namespace SysbatLib.Models
         public virtual ObjetoValores Objeto { get; set; }
         public virtual Propiedad Propiedad { get; set; }
     }
+
+    public class Usuario
+    {
+        [Key]
+        public int Oid { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
+        public string FacebookId { get; set; }
+        public string GoogleId { get; set; }
+        public string TwitterId { get; set; }
+        public bool Active { get; set; }
+        public int Type { get; set; }
+    }
 }

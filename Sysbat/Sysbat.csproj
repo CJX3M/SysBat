@@ -136,11 +136,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201509012031110_init.cs" />
-    <Compile Include="Migrations\201509012031110_init.Designer.cs">
-      <DependentUpon>201509012031110_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\SysBatLibContext.cs" />
   </ItemGroup>
@@ -1786,11 +1781,6 @@
     <Content Include="Views\PropVal\Edit.cshtml" />
     <Content Include="Views\PropVal\Delete.cshtml" />
     <Content Include="Views\Shared\_DetailsLayout.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201509012031110_init.resx">
-      <DependentUpon>201509012031110_init.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SysBatLib\SysBatLib.csproj">

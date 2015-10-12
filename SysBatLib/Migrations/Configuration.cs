@@ -1,18 +1,18 @@
-namespace Sysbat.Migrations
+namespace SysBatLib.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Sysbat.Models.SysbatContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<SysbatLib.Models.SysbatContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Sysbat.Models.SysbatContext context)
+        protected override void Seed(SysbatLib.Models.SysbatContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -17,7 +17,7 @@ namespace Sysbat
     {
         protected void Application_Start()
         {
-            Database.SetInitializer<Sysbat.Models.SysbatContext>(null); //For Changes
+            Database.SetInitializer<SysbatLib.Models.SysbatContext>(null); //For Changes
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);

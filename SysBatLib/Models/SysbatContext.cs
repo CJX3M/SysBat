@@ -13,6 +13,7 @@ namespace SysbatLib.Models
         public DbSet<Propiedad> Propiedades { get; set; }
         public DbSet<ObjetoValores> ObjetosValores { get; set; }
         public DbSet<PropiedadValores> PorpiedadesValores { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
         public SysbatContext() : base("DevConn"){}
 
