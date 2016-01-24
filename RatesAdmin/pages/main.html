@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<body ng-controller="loginController">
+    <form class="form-signin" name="loginForm" ng-submit="Login(loginForm.$valid)" novalidate>
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <div class="form-group" ng-class="{ 'has-error' : loginForm.username.$invalid }">
+            <label for="txtUser" class="sr-only">User Name</label>
+            <input type="input" id="txtUser" name="username" class="form-control" placeholder="User Name" required autofocus="" ng-model="user">
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : loginForm.password.$invalid }">
+            <label for="txtPassword" class="sr-only">Password</label>
+            <input type="password" id="txtPassword" name="password" class="form-control" placeholder="Password" required ng-model="password">
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <div class="btn btn-lg btn-primary btn-block" type="submit" ng-disabled="loginForm.$invalid" >Sign in</div>
+    </form>
+</body>
+</html>

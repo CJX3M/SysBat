@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html ng-app="ratesAdmin">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="Stylesheet"/>
+    <link href= "//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="Stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="Stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Rates System Admin</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right" ng-hide="signedIn">
+                    <li><a href="#/"><i class="fa fa-home"></i> Login</a></li>
+                    <li><a href="#register"><i class="fa fa-shield"></i> Register</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" ng-show="signedIn">
+                    <li><a href="#admin"><i class="fa fa-home"></i> Welcome {{ currentUser.username }}</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Rates Admin System</p>
+    </footer>
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/app")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

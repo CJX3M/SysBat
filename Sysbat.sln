@@ -10,6 +10,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sysbat.Tests", "Sysbat.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysBatLib", "SysBatLib\SysBatLib.csproj", "{05CE8B0C-3CC1-4C8E-B37B-4846EBFCBCC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatesAdmin", "RatesAdmin\RatesAdmin.csproj", "{AA879638-17B5-4A38-BB04-391E80433B65}"
+	ProjectSection(ProjectDependencies) = postProject
+		{05CE8B0C-3CC1-4C8E-B37B-4846EBFCBCC8} = {05CE8B0C-3CC1-4C8E-B37B-4846EBFCBCC8}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +33,10 @@ Global
 		{05CE8B0C-3CC1-4C8E-B37B-4846EBFCBCC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05CE8B0C-3CC1-4C8E-B37B-4846EBFCBCC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05CE8B0C-3CC1-4C8E-B37B-4846EBFCBCC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA879638-17B5-4A38-BB04-391E80433B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA879638-17B5-4A38-BB04-391E80433B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA879638-17B5-4A38-BB04-391E80433B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA879638-17B5-4A38-BB04-391E80433B65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

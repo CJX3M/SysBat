@@ -35,3 +35,41 @@ C:\Users\502352803\Documents\Visual Studio 2010\Projects\Sysbat\Sysbat\obj\Debug
 C:\Users\502352803\Documents\Visual Studio 2010\Projects\Sysbat\Sysbat\obj\Debug\Sysbat.csproj.GenerateResource.Cache
 C:\Users\502352803\Documents\Visual Studio 2010\Projects\Sysbat\Sysbat\obj\Debug\Sysbat.dll
 C:\Users\502352803\Documents\Visual Studio 2010\Projects\Sysbat\Sysbat\obj\Debug\Sysbat.pdb
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\Sysbat.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\Sysbat.pdb
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\Antlr3.Runtime.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\EntityFramework.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\Newtonsoft.Json.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\SysBatLib.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Net.Http.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Net.Http.Formatting.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Net.Http.WebRequest.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.Helpers.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.Http.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.Http.WebHost.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.Mvc.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.Optimization.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.Providers.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.Razor.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.WebPages.Deployment.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.WebPages.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.WebPages.Razor.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\WebGrease.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\SysBatLib.pdb
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\EntityFramework.xml
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\Newtonsoft.Json.xml
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Net.Http.xml
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Net.Http.Formatting.xml
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Net.Http.WebRequest.xml
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.Helpers.xml
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.Http.xml
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.Http.WebHost.xml
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.Mvc.xml
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.Razor.xml
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.WebPages.xml
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.WebPages.Deployment.xml
+C:\Users\502352803\Documents\SysBat\Sysbat\bin\System.Web.WebPages.Razor.xml
+C:\Users\502352803\Documents\SysBat\Sysbat\obj\Debug\Sysbat.csprojResolveAssemblyReference.cache
+C:\Users\502352803\Documents\SysBat\Sysbat\obj\Debug\Sysbat.dll
+C:\Users\502352803\Documents\SysBat\Sysbat\obj\Debug\Sysbat.pdb

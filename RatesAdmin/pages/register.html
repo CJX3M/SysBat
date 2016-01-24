@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body ng-controller="loginRegisterController">
+    <form class="form-signin" name="registerForm" ng-submit="Register(registerForm.$valid)" novalidate>
+        <h2 class="form-signin-heading">Fill in form input</h2>
+        <div class="form-group" ng-class="{ 'has-error' : registerForm.username.$invalid }">
+            <label for="inputEmail" class="sr-only">User Name</label>
+            <input type="text" id="txtUser" class="form-control" name="username" ng-minlength="3" required
+                placeholder="User Name" autofocus="" ng-model="Username">
+            <div class="help-block" ng-messages="registerForm.username.$error" ng-show="registerForm.username.$touched">
+                <div ng-messages-include="messages.html"></div>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : registerForm.password.$invalid }">
+            <label for="txtPassword" class="sr-only">Password</label>
+            <input type="password" id="txtPassword" name="password" ng-minlength="8" class="form-control" placeholder="Password" ng-model="Password" required>
+            <div class="help-block" ng-messages="registerForm.password.$error" ng-show="registerForm.password.$touched">
+                <div ng-messages-include="messages.html"></div>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : Password != ConfirmPassword }">
+            <label for="txtConfirmPassword" class="sr-only">Confirm Password</label>
+            <input type="password" id="txtConfirmPassword" name="confirmPassword" class="form-control" placeholder="Confirm Password" ng-model="ConfirmPassword" required>
+            <div class="help-block" ng-messages="registerForm.confirmPassword.$error" ng-show="registerForm.confirmPassword.$touched">
+                <div ng-messages-include="messages.html"></div>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : registerForm.email.$invalid }">
+            <label for="txtEmail" class="sr-only">Email</label>
+            <input type="email" id="txtEmail" class="form-control" name="email" placeholder="Email" ng-model="Email" required>
+            <div class="help-block" ng-messages="registerForm.email.$error" ng-show="registerForm.email.$touched">
+                <div ng-messages-include="messages.html"></div>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : registerForm.type.$invalid && myForm.service_id.$dirty }">
+            <select id="lstTypes" class="form-control" ng-model="Type" name="type" ng-options="objeto.nombre for objeto in Objetos" required>
+                <option value="">--- Select Your Type ---</option> 
+            </select>
+            <div class="help-block" ng-messages="registerForm.type.$error" ng-show="registerForm.type.$touched">
+                <div ng-messages-include="messages.html"></div>
+            </div>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" ng-disabled="registerForm.$invalid" type="submit">Register</button>
+    </form>
+</body>
+</html>
